@@ -14,3 +14,11 @@ def cria_baralho():
         paus.append(el+'♣')
     baralho= espadas+copas+ouros+paus
     return baralho
+
+# Função 2 --> Extrair naipe da carta
+
+def extrai_naipe(carta):
+    naipe = ['♠', '♦', '♥', '♣' ]
+    for i in naipe:
+        if i in carta:
+            return i  
