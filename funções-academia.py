@@ -21,7 +21,8 @@ def extrai_naipe(carta):
     naipe = ['♠', '♦', '♥', '♣' ]
     for i in naipe:
         if i in carta:
-            return i  
+            return i
+            break  
 
 # Função 3 --> Extrair valor da carta
 
