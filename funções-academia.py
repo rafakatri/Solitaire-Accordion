@@ -49,3 +49,12 @@ def lista_movimentos_possiveis(baralho,ind):
             mov.append(ind)
     return mov
 
+# Função 5 --> Empilha as cartas
+
+def empilha(baralho,origem,destino):
+    cima = baralho[origem]
+    baixo = baralho[destino]
+    baralho.remove(baralho[origem])
+    baralho.remove(baralho[destino])
+    baralho.insert(destino,cima)
+    return baralho
