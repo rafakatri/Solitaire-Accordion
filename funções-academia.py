@@ -58,3 +58,15 @@ def empilha(baralho,origem,destino):
     baralho.remove(baralho[destino])
     baralho.insert(destino,cima)
     return baralho
+
+# Função 6 --> Conferir se existem movimentos possíveis
+
+def possui_movimentos_possiveis(baralho):
+    for el in range(0,len(baralho)+1):
+        try:
+            if lista_movimentos_possiveis(baralho,el) != []:
+                return True
+                break
+        except:
+            pass
+    return False
