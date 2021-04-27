@@ -1,1 +1,1 @@
-import funções-academia
+import funçõesAcademia
