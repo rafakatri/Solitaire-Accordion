@@ -1,3 +1,4 @@
+import random
 
 # Função 1 --> Cria baralho
 
@@ -13,6 +14,7 @@ def cria_baralho():
         ouros.append(el+'♦')
         paus.append(el+'♣')
     baralho= espadas+copas+ouros+paus
+    random.shuffle(baralho)
     return baralho
 
 # Função 2 --> Extrair naipe da carta
