@@ -1,4 +1,6 @@
 from funçõesAcademia import *
+import colorama
+from colorama import Fore
 
 while True:
     baralho = cria_baralho()
