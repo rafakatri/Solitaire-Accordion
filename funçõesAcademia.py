@@ -39,8 +39,11 @@ def extrai_valor(carta):
 
 def lista_movimentos_possiveis(baralho,ind):
     mov=[]
-    valor = extrai_valor(baralho[ind])
-    naipe = extrai_naipe(baralho[ind])
+    try:
+        valor = extrai_valor(baralho[ind])
+        naipe = extrai_naipe(baralho[ind])
+    except:
+        return []
     if ind == 0:
         return []
     if ind >= 3:
