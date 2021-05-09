@@ -65,10 +65,7 @@ def empilha(baralho,origem,destino):
 
 def possui_movimentos_possiveis(baralho):
     for el in range(0,len(baralho)+1):
-        try:
-            if lista_movimentos_possiveis(baralho,el) != []:
-                return True
-                break
-        except:
-            pass
+        if lista_movimentos_possiveis(baralho,el) != []:
+            return True
+            break
     return False
