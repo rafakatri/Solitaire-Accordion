@@ -15,7 +15,10 @@ while True:
                 for el in mov:
                     print(str(el) + ". "+ str(baralho[el-1]))
                 perg3 = int(input('Escolha um lugar para ser empilhado (pelo número) '))
-                baralho = empilha(baralho, perg2-1, perg3-1)
+                if perg3 in mov:
+                    baralho = empilha(baralho, perg2-1, perg3-1)
+                else:
+                    print('Opção inválida')
             else:
               print('Não é possível fazer um movimento, escolha outra carta')
         except:
