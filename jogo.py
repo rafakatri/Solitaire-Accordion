@@ -7,7 +7,14 @@ while True:
     while possui_movimentos_possiveis(baralho) == True:
         i=1
         for el in baralho:
-            print("{0}. {1}".format(i,el))
+            if '♥' in el:
+                print(Fore.RED + "{0}. {1}".format(i,el))
+            elif '♠' in el:
+                print(Fore.BLUE + '{0}. {1}'.format(i,el))
+            elif '♣' in el:
+                print(Fore.GREEN + '{0}. {1}'.format(i,el))
+            elif '♦' in el:
+                print(Fore.MAGENTA + '{0}. {1}'.format(i,el))
             i += 1
         try:
             perg2 = int(input("Escolha uma carta para empilhar (pelo número) "))
@@ -15,7 +22,14 @@ while True:
             if mov != []:
                 print('Escolhas possíveis:')
                 for el in mov:
-                    print(str(el) + ". "+ str(baralho[el-1]))
+                    if '♥' in baralho[el-1]:
+                        print(Fore.RED + str(el) + ". "+ str(baralho[el-1]))
+                    elif '♠' in baralho[el-1]:
+                        print(Fore.BLUE + str(el) + ". "+ str(baralho[el-1]))
+                    elif '♣' in baralho[el-1]:
+                        print(Fore.GREEN+ str(el) + ". "+ str(baralho[el-1]))
+                    elif '♦' in baralho[el-1]:
+                        print(Fore.MAGENTA + str(el) + ". "+ str(baralho[el-1]))
                 perg3 = int(input('Escolha um lugar para ser empilhado (pelo número) '))
                 if perg3 in mov:
                     baralho = empilha(baralho, perg2-1, perg3-1)
