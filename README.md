@@ -18,7 +18,7 @@ Uma posição é válida, se:
 
 
 
-- É a carta anterior a escolhida ou três posições atrás.
+- É anterior a carta escolhida ou três posições atrás dela.
 
 
 
