@@ -1,7 +1,7 @@
 from funçõesAcademia import *
 import colorama
 from colorama import Fore
-
+colorama.init(autoreset=True,convert=True)
 while True:
     baralho = cria_baralho()
     while possui_movimentos_possiveis(baralho) == True:
